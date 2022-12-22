@@ -11,7 +11,6 @@ let all = "";
 
 // Write password to the #password input
 function generatePassword() {
-  console.log("btn was clicked")
   let passwrdLength = prompt(
     "choose a number between 8 and 128"
   );
@@ -40,7 +39,7 @@ function generatePassword() {
 
   let password = "";
   for (var i = 0; i < passwordLength; i++){
-    password += allChar.charAt(Math.floor(Math.random() * allChar.length))
+    password += all.charAt(Math.floor(Math.random() * all.length))
   }
 
 function writePassword() {
