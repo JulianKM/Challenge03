@@ -7,7 +7,7 @@ var lowerCase ="abcdefghijklmnopqrstuvwxyz";
 var upperCase ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var specialCharacters ="!@#$%^&*()+=<>";
 var numbers = "0123456789";
-let allChar = "";
+let all = "";
 
 // Write password to the #password input
 function generatePassword() {
@@ -16,23 +16,23 @@ function generatePassword() {
     "choose a number between 8 and 128"
   );
   if (passwordLength < 8 || passwordLength > 128 ) {
-    alert("enter a number between 8 and 128.");
+    prompt("enter a number between 8 and 128.");
   } else {
     let lowerCase = confirm("Would you like to use lowerCase letters?");
     if(lowerCase){
-      allChar += lowerCase
+      all += lowerCase
     };
     let upperCase = confirm("Would you like to use upperCase letters?");
     if (upperCase){
-      allChar += upperCase
+      all += upperCase
     };
     let specialCharacters = confirm("Would you like to use specialCharacters?");
     if (specialCharacters){
-      allChar += specialCharacters
+      all += specialCharacters
     };
     let numbers = confirm("Would you like to use numbers?");
     if (numbers){
-      allChar += numbers
+      all += numbers
     };
    
    return result }
