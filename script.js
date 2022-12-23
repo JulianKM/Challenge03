@@ -19,25 +19,25 @@ function writePassword() {
 }
 
 function generatePassword() {
-  let passwrdLength = prompt(
+  var passwrdLength = prompt(
     "choose a number between 8 and 128"
   );
   if (passwordLength < 8 || passwordLength > 128 ) {
     prompt("enter a number between 8 and 128.");
   } else {
-    let lowerCase = confirm("use lowerCase letters?");
+    var lowerCase = confirm("use lowerCase letters?");
     if(lowerCase){
       result += lowerCase
     };
-    let upperCase = confirm("use upperCase letters?");
+    var upperCase = confirm("use upperCase letters?");
     if (upperCase){
       result += upperCase
     };
-    let specialCharacters = confirm("use specialCharacters?");
+    var specialCharacters = confirm("use specialCharacters?");
     if (specialCharacters){
       result += specialCharacters
     };
-    let numbers = confirm("use numbers?");
+    var numbers = confirm("use numbers?");
     if (numbers){
       result += numbers
     };
