@@ -7,7 +7,7 @@ var lowerCase ="abcdefghijklmnopqrstuvwxyz";
 var upperCase ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "0123456789"
 var specialCharacters ="!@#$%^&*()+=<>";
-let all = "";
+var result = "";
 
 // Write password to the #password input
 function writePassword() {
@@ -27,19 +27,19 @@ function generatePassword() {
   } else {
     let lowerCase = confirm("use lowerCase letters?");
     if(lowerCase){
-      all += lowerCase
+      result += lowerCase
     };
     let upperCase = confirm("use upperCase letters?");
     if (upperCase){
-      all += upperCase
+      result += upperCase
     };
     let specialCharacters = confirm("use specialCharacters?");
     if (specialCharacters){
-      all += specialCharacters
+      result += specialCharacters
     };
     let numbers = confirm("use numbers?");
     if (numbers){
-      all += numbers
+      result += numbers
     };
    
    return result }
@@ -47,7 +47,7 @@ function generatePassword() {
 
   let password = "";
   for (var i = 0; i < passwordLength; i++){
-    password += all.charAt(Math.floor(Math.random() * all.length))
+    password += result.charAt(Math.floor(Math.random() * result.length))
   }
 
   // Add event listener to generate button
